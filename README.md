@@ -2,7 +2,7 @@
 
 **Modern GTK4 rewrite of the [nitrogen](https://github.com/l3ib/nitrogen) background manager for X11 desktops.**
 
-Nitrogen-gtk4 replaces the aging, unmaintained GTK2-based nitrogen with a clean
+nitrogen-gtk4 replaces the aging, unmaintained GTK2-based nitrogen with a clean
 Python + GTK4 rewrite while keeping full CLI and config-file compatibility.
 
 ---
