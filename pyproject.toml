@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nitrogen-gtk4"
+version = "1.0.2"
+description = "Modern GTK4 rewrite of the nitrogen background manager for X11"
+readme = "README.md"
+license = {text = "GPL-2.0-or-later"}
+requires-python = ">=3.10"
+authors = [
+    {name = "Chris McGimpsey-Jones"},
+]
+keywords = ["background", "desktop", "X11", "gtk4", "nitrogen"]
+classifiers = [
+    "Development Status :: 4 - Production",
+    "Environment :: X11 Applications :: GTK",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: GNU General Public License v2 or later (GPLv2+)",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+    "Topic :: Desktop Environment",
+]
+dependencies = [
+    "PyGObject>=3.42",
+    "python-xlib>=0.33",
+    "Pillow>=10.0",
+]
+
+[project.optional-dependencies]
+heif = ["pillow-heif>=0.13"]
+jxl = ["jxlpy>=0.9"]
+exr = ["OpenEXR>=3.0"]
+all = ["pillow-heif>=0.13", "jxlpy>=0.9", "OpenEXR>=3.0"]
+
+[project.scripts]
+nitrogen-gtk4 = "nitrogen_gtk4.cli:main"
+
+[project.gui-scripts]
+nitrogen-gtk4-gui = "nitrogen_gtk4.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/fpucore/nitrogen-gtk4"
+
+[tool.setuptools.packages.find]
+include = ["nitrogen_gtk4*"]

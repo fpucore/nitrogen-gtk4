@@ -1,0 +1,4 @@
+include README.md
+include pyproject.toml
+include setup.py
+recursive-include nitrogen_gtk4 *.py
